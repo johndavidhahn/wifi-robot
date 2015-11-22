@@ -1,0 +1,59 @@
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+ <script type="application/javascript">
+	function stop(){
+	$.get("http://192.168.1.123/stop", {},
+      function(data){
+    	document.getElementById("simResults").innerHTML=data;
+      });
+  }
+
+	function left(){
+	$.get("http://192.168.1.123/left", {},
+      function(data){
+    	document.getElementById("simResults").innerHTML=data;
+      });
+  }
+
+	function right(){
+	$.get("http://192.168.1.123/right", {},
+      function(data){
+    	document.getElementById("simResults").innerHTML=data;
+      });
+  }
+
+	function forward(){
+	$.get("http://192.168.1.123/forward", {},
+      function(data){
+    	document.getElementById("simResults").innerHTML=data;
+      });
+  }
+
+
+	function reverse(){
+	$.get("http://192.168.1.123/reverse", {},
+      function(data){
+    	document.getElementById("simResults").innerHTML=data;
+      });
+  }
+ </script>
+
+</head>
+<body>
+   <h4>Current Command:</h4>
+
+   <div id="myDiv"></div>
+
+  	<input type="button" value="Left" onclick="left();" />
+  	<input type="button" value="Right" onclick="right();" />
+  	<input type="button" value="Stop" onclick="stop();" />
+  	<input type="button" value="Forward" onclick="forward();" />
+  	<input type="button" value="Reverse" onclick="reverse();" />
+  	<h4>Simulation Results:</h4>
+
+   <div id="simResults"></div>
+
+</body>
+
+</html>
+
